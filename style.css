@@ -1,26 +1,51 @@
 body {
-    background-color: darkgreen;
-}
-.sentance {
-    margin: auto;
-}
-h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffff;
-}
-.link {
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 500px;
+    background-color: #f0f0f0; /* Цвет фона страницы */
+ }
+ .sentance {
+    text-align: center;
+    padding: 50px;
+ }
+ .link {
+    text-align: center;
+    margin: 20px;
+ }
+ /* Стили для эффекта снегопада */
+ .snowfall {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-}
-a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 70px;
-}
+    height: 100%;
+    z-index: 1000;
+    background: transparent;
+    pointer-events: none;
+ }
+ .snowflake {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: snowfall linear infinite;
+ }
+ @keyframes snowfall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+ }
+ /* Стили для заголовка */
+ h1 {
+    color: #ff0000; /* Цвет текста */
+ }
+ /* Стили для ссылки */
+ a {
+    color: #00f; /* Цвет ссылки */
+    text-decoration: none;
+    font-weight: bold;
+ }
+ a:hover {
+    color: #0f0; /* Цвет ссылки при наведении */
+ }
